@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
+
 <a href="{{ url_for('index') }}" class="btn-warning home">index</a>
+<div class="counter">{{ world.counter }}</div>
 <a href="{{ url_for('live') }}" class="btn btn-info refresh">live</a>
-</div>
+
 <table class="world">
     {% for i in range(world.world|length) %}
     <tr>
@@ -20,7 +21,6 @@
     </tr>
     {% endfor %}
 </table>
-<div class="counter">{{ world.counter }}</div>
 {% endblock %}
 {% block scripts %}
 <script>
