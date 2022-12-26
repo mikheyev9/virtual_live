@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block app_content %}
+    <a class="btn btn-primary" href="{{ url_for('live') }}">create new live</a>
+      <form method="post">
+        <input type="text" name="size" id="size"><br>
+        <input class="btn btn-primary" type="submit" value="go">
+      </form>
+{% endblock %}
+{% endblock %}
